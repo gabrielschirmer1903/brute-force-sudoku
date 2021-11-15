@@ -1,0 +1,34 @@
+body h1{
+  text-align: center;
+}
+.tabela{
+  max-width: 758px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: black;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+#table tr td {
+  padding: 5px;
+  border-width: 1px;
+    border-style: solid;
+    border-color: gray;
+    padding: 5px;
+    font-size: 30pt;
+    vertical-align: middle;
+    width: 70px;
+    height: 70px;
+    font-weight: bold;
+}
+#table tr td input{
+  width: 67px;
+  font-size: 30pt;
+  font-weight: bold;
+  background-color: white;
+  text-align: center;
+  color: green;
+  width: 60px;
+  height: 60px;
+}
