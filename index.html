@@ -6,7 +6,7 @@
   <title>Sudoku solver</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="initial-scale=1.0">
-  <script type="application/javascript" src="sudokuu.js"></script>
+  
   <link rel="stylesheet" type="text/css" href="style.css">
   </style>
 </head>
@@ -19,26 +19,10 @@
       </tbody>
     </table>
   </div>
+<div class="botoes">
+  <button id='botao-resolver' onclick="resolverSudoku()">Resolver</button>
+  <button id='botao-limpar' onclick="limparTabela()" disabled>Limpar</button>
+</div>
 </body>
-
+<script type="application/javascript" src="sudokuu.js"></script>
 </html>
-
-<script>
-  (function () {
-    var table = document.getElementById("table");
-
-    var x;
-    var y;
-    var d = '';
-
-    for (y = 1; y < 10; y++) {
-      d += "<tr>";
-      for (x = 1; x < 10; x++) {
-        d += "<td>" + "<input type='number' class='form-control' min='1' max='9' id='" + y + x + "'>" + "</td>";
-      }
-      d += "</tr>";
-    }
-    table.innerHTML = d;
-
-  })();
-</script>
