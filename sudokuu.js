@@ -43,17 +43,24 @@ function resolverSudoku() {
         }
     }
     let validacao = validarInput(sudokuTemplate)
-    console.log(validacao)
-    // let sudokuResolvido = bruteForce(sudokuTemplate)
-    // atualizarInterface(sudokuResolvido);
+    //console.log(validacao)
+    if (validacao) {
+        let sudokuResolvido = bruteForce(sudokuTemplate)
+        atualizarInterface(sudokuResolvido);
+    } else {
+        aviso = document.getElementById('warning-txt')
+        aviso.textContent = 'Sudoku inválido'
+
+        let botaoLimpar = document.getElementById('botao-limpar')
+        botaoLimpar.disabled = false
+
+        return false
+    }
 }
 
 
 
 function validarInput(sudoku) {
-
-    console.log(sudoku)
-
     for (let index = 0; index < 9; index++) {
         for (let i = 0; i < 9; i++) {
             for (let j = i + 1; j < 9; j++) {
@@ -118,8 +125,6 @@ function validarInput(sudoku) {
                 return false
             }
         }
-
-
     }
     return true
 }
@@ -287,6 +292,10 @@ function atualizarInterface(sudoku) {
 }
 
 function limparTabela() {
+
+    let aviso = document.getElementById('warning-txt')
+    aviso.textContent = ''
+
     for (let i = 0; i < 9; i++) {
         for (let j = 0; j < 9; j++) {
             const valor = document.getElementById(i + ',' + j)
