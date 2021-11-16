@@ -49,7 +49,11 @@ function resolverSudoku() {
         atualizarInterface(sudokuResolvido);
     } else {
         aviso = document.getElementById('warning-txt')
-        aviso.textContent = 'Sudoku inválido'
+        spop({
+            template:'<strong>Valores inseridos incorretamente, limpe e insira novamente os valores.</strong>', 
+            style:'error',
+            autoclose: 4000
+          });
 
         let botaoLimpar = document.getElementById('botao-limpar')
         botaoLimpar.disabled = false
@@ -57,8 +61,6 @@ function resolverSudoku() {
         return false
     }
 }
-
-
 
 function validarInput(sudoku) {
     for (let index = 0; index < 9; index++) {
