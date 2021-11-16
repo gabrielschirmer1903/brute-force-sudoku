@@ -8,7 +8,7 @@
     for (y = 0; y < 9; y++) {
         d += "<tr>";
         for (x = 0; x < 9; x++) {
-            d += "<td>" + "<input type='number' class='form-control'  max='9' id='" + y + ',' + x + "'>" + "</td>";
+            d += "<td>" + "<input type='number' class='form-control' min='1'  max='9' id='" + y + ',' + x + "'>" + "</td>";
         }
         d += "</tr>";
     }
