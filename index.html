@@ -34,7 +34,7 @@
     for (y = 1; y < 10; y++) {
       d += "<tr>";
       for (x = 1; x < 10; x++) {
-        d += "<td>" + "<input>" + "</td>";
+        d += "<td>" + "<input type='number' class='form-control' min='1' max='9' id='" + y + x + "'>" + "</td>";
       }
       d += "</tr>";
     }
