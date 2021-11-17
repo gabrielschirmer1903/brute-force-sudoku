@@ -2,7 +2,7 @@ body h1{
   text-align: center;
 }
 .tabela{
-  max-width: 758px;
+  max-width: 750px;
   border-width: 3px;
   border-style: solid;
   border-color: black;
@@ -32,7 +32,6 @@ body h1{
   width: 60px;
   height: 60px;
 }
-
 .botoes {
   display: flex;
   justify-content: center;
@@ -57,4 +56,24 @@ body h1{
   color: white;
   background-color: hsl(354deg 81% 63%);
   border: 1px solid hsl(354deg 81% 63%);
+}
+
+/* Vertical line 1 */
+#td02, #td12, #td22, #td32, #td42, #td52, #td62, #td72,#td82{
+  border-right: 5px solid black !important;
+}
+
+/* Vertical line 2 */
+#td05, #td15, #td25, #td35, #td45, #td55, #td65, #td75,#td85{
+  border-right: 5px solid black !important;
+}
+
+/* Horizontal line 1 */
+#td20, #td21, #td22, #td23, #td24, #td25, #td26, #td27,#td28{
+  border-bottom: 5px solid black !important;
+}
+
+/* Horizontal line 2 */
+#td50, #td51, #td52, #td53, #td54, #td55, #td56, #td57,#td58{
+  border-bottom: 5px solid black !important;
 }
